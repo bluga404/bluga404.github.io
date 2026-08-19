@@ -14,12 +14,12 @@ export default function Nav() {
       text: 'Home',
     },
     {
-      path: '/about',
-      text: 'About',
+      path: '/projects',
+      text: 'Projects',
     },
     {
-      path: '/work',
-      text: 'Work',
+      path: '/gallery',
+      text: 'Gallery',
     },
   ]
 
