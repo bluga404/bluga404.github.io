@@ -2,61 +2,43 @@
 
 # Portfolio
 
-Portfolio is a neobrutalism-styled nextjs tailwind template for portfolios.
+This is my personal portfolio, built on top of a neobrutalism-styled Next.js Tailwind template. 
 
-## Get started
+## About This Template
 
-[Create a new repo](https://github.com/neobrutalism-templates/portfolio/generate) from this template.
+### Where to Find the Original Template
+This project was initially scaffolded using the [Neobrutalism Portfolio Template](https://github.com/neobrutalism-templates/portfolio). 
 
-### Installation
+### How to Use the Original Template
+If you want to start fresh with the original template:
+1. [Create a new repo](https://github.com/neobrutalism-templates/portfolio/generate) from the template.
+2. Install dependencies using `pnpm i`.
+3. Run the app locally using `pnpm run dev`.
+4. Update `layout.tsx` metadata, `page.tsx` content, and `data/` folder content to suit your needs.
+5. Refer to the [styling docs](https://neobrutalism.dev/styling) for Neobrutalism styling customizations.
 
-This template uses `pnpm` package manager so make sure you have it installed.
+---
 
-To install all dependencies run:
+## How I Use This Template Now
+
+I have heavily customized and adapted this template to fit my personal needs as a Machine Learning Engineer and Data Enthusiast.
+
+### Key Customizations & Data Management
+- **Projects (`src/app/projects/page.tsx` & `src/data/projects.ts`)**: I have restructured the projects page to display a 3-column grid (on large screens) and updated the data model to include fields like `year`, `role`, and `skills`. The original aspect ratio was updated to `16/9` to better showcase project preview images. I also added dynamic handling for `Visit` and `GitHub` links.
+- **Gallery (`src/app/gallery/page.tsx` & `src/data/gallery.ts`)**: I added a Gallery section to properly showcase my licenses, certifications, and credentials with preview images, also standardized to a `16/9` aspect ratio.
+- **Experiences (`src/app/page.tsx`)**: I modified the homepage to include my professional timeline and removed the default skills section to focus more on my roles and descriptions.
+- **Styling tweaks**: Adjusted the main layout wrapper from `750px` to `900px` to allow for wider content and project cards. Also updated the navbar (`src/components/nav.tsx`) to dynamically fit its content using `w-fit` rather than stretching the full width of the screen. I've also enforced clear visibility in dark mode (e.g., ensuring text colors turn white appropriately).
+
+### Installation & Running Locally
+
+This project still uses `pnpm`. To run my customized version of the portfolio locally:
 
 ```bash
+# Install all dependencies
 pnpm i
-```
 
-To run the app locally:
-
-```bash
+# Run the local development server
 pnpm run dev
 ```
 
-### Config
-
-- Inside `layout.tsx` update the metadata
-- Inside `page.tsx` update the content
-- Update the `favicon.ico`
-
-### Content config
-
-#### Links on the home page
-
-To update the links on the home page go to `src/components/links.tsx` and inside `links` array add or remove objects. Each object has 2 properties, `icon`, and `href`. `href` is self-explanatory, and inside `icon` you'll put an icon imported from `@icons-pack/react-simple-icons`. Visit [simpleicons.org](https://simpleicons.org/) to see all the icons. Import them by adding `Si` prefix to their name as I imported them in `links` component.
-
-#### Updating the rest of the content
-
-Inside `data` folder you have the rest of the content you can edit.
-
-#### Updating the `previewImage` in `projects.ts`
-
-Make sure to put `/` + name of the picture that's inside public folder. e.g. you have a `my-project.png` picture inside `public` folder, you'll type:
-
-```ts
-previewImage: '/my-project.png'
-```
-
-##### Image aspect ratio
-
-Inside `app/work/page.tsx` `previewImage` is wrapped inside AspectRatio component. Change the `ratio` prop so it suits your needs (default preview images are 710 x 260, so I set the ratio to be `71 / 26`).
-
-#### Updating skills
-
-I need to clarify how to edit skills since it looks confusing at first. Inside the `skills.ts` inside the `SKILLS` array, each object in the array is a field of skills (can be anything: frontend, backend, devops, design etc). Each object has a `field` prop which is the field name. Also, each object has a `skills` array where each array member has a `skill` value (used as tooltip value), and `icon` is the icon that will be displayed.
-You update them the same way you'd update links on the home page.
-
-### Styling
-
-To change the styling visit [styling docs](https://neobrutalism.dev/styling), and copy the desired styling to your css like it's shown in the styling docs.
+Then visit `http://localhost:3000`.

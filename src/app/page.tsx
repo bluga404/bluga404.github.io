@@ -1,5 +1,4 @@
 import Links from '@/components/links'
-import Skills from '@/components/sections/skills'
 
 const EXPERIENCES = [
   {
@@ -49,7 +48,7 @@ export default function Home() {
       <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-6 sm:gap-8">
         <div className="text-center sm:text-left">
           <h1 className="text-2xl font-heading sm:text-4xl">Walker Valentinus</h1>
-          <p className="mt-2 text-lg sm:text-xl">Machine Learning Engineer / iOS Developer</p>
+          <p className="mt-2 text-lg sm:text-xl">Machine Learning Engineer / Data Enthusiast</p>
           <Links />
         </div>
         <img 
@@ -60,8 +59,7 @@ export default function Home() {
       </div>
       <div className="mt-8 text-base sm:text-lg">
         <p>
-          Gained my bachelor's degree in information systems at Institut Teknologi Del, where I have learned the fundamentals of data, programming, and business.
-Now i am learning at Apple Developer Academy apprentice with a strong interest in Machine Learning, particularly Deep Learning and Object Detection. Experienced in developing applications for the Apple ecosystem and eager to integrate machine learning models into practical software solutions. Passionate about building technology that connects intelligent systems with real-world user needs.
+          Gained my bachelor's degree in information systems at Institut Teknologi Del. Now i am learning at Apple Developer Academy apprentice with a strong interest in Machine Learning, particularly Deep Learning and Object Detection. Passionate about building technology that connects intelligent systems with real-world user needs. I possess strong teamwork skills and can work well under pressure. I am open to learning from experts in their fields to gain the knowledge they have. With this background, my abilities can develop and grow, helping me become a better individual.
         </p>
       </div>
 
@@ -89,11 +87,7 @@ Now i am learning at Apple Developer Academy apprentice with a strong interest i
         </div>
       </div>
 
-      <div className="mt-16 mb-16">
-        <Skills />
-      </div>
 
-      
     </div>
   )
 }

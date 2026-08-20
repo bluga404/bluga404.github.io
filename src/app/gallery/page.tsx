@@ -2,56 +2,7 @@
 
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-
-const CERTIFICATIONS = [
-  {
-    year: '2026',
-    items: [
-      {
-        title: 'Apple Developer Academy Foundation',
-        issuer: 'Apple',
-        date: 'March 2026',
-        credentialId: 'CRED-12345',
-        image: '/placeholder.jpg',
-        link: '#'
-      },
-    ]
-  },
-  {
-    year: '2025',
-    items: [
-      {
-        title: 'Machine Learning Specialization',
-        issuer: 'DeepLearning.AI',
-        date: 'August 2025',
-        credentialId: 'CRED-67890',
-        image: '/placeholder.jpg',
-        link: '#'
-      },
-      {
-        title: 'Data Science Professional Certificate',
-        issuer: 'IBM',
-        date: 'February 2025',
-        credentialId: 'CRED-11223',
-        image: '/placeholder.jpg',
-        link: '#'
-      }
-    ]
-  },
-  {
-    year: '2024',
-    items: [
-      {
-        title: 'Front-End Web Development',
-        issuer: 'Dicoding',
-        date: 'July 2024',
-        credentialId: 'CRED-55443',
-        image: '/placeholder.jpg',
-        link: '#'
-      }
-    ]
-  }
-]
+import CERTIFICATIONS from '@/data/gallery'
 
 function YearGroup({ group }: { group: typeof CERTIFICATIONS[0] }) {
   const [isOpen, setIsOpen] = useState(true)
@@ -75,13 +26,15 @@ function YearGroup({ group }: { group: typeof CERTIFICATIONS[0] }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {group.items.map((cert, certId) => (
             <div key={certId} className="flex flex-col rounded-base border-2 border-border bg-secondary-background shadow-shadow overflow-hidden">
-              
-              {/* Image Placeholder */}
-              {/* Ganti div ini dengan <img> atau <Image> kalau fotonya sudah siap */}
-              <div className="aspect-[4/3] w-full border-b-2 border-border bg-[#e6e6e6] dark:bg-[#1f1f1f] relative flex items-center justify-center p-4">
-                <span className="font-heading text-lg opacity-40 text-center">IMAGE<br/>PLACEHOLDER</span>
-              </div>
-              
+              {cert.image && cert.image !== '/placeholder.jpg' && cert.image !== '' ? (
+                <div className="border-b-2 border-border aspect-[16/9]">
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : null}
               {/* Content */}
               <div className="p-5 sm:p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-heading leading-tight mb-2">{cert.title}</h3>
@@ -111,7 +64,7 @@ export default function Gallery() {
       <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Gallery</h1>
       
       <div className="mb-12 text-base sm:text-lg">
-        <p>A showcase of my licenses, certifications, and achievements</p>
+        <p>A showcase of my licenses and certifications</p>
       </div>
 
       <div className="flex flex-col gap-16">
