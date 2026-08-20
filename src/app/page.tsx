@@ -59,7 +59,7 @@ export default function Home() {
       </div>
       <div className="mt-8 text-base sm:text-lg">
         <p>
-          Gained my bachelor's degree in information systems at Institut Teknologi Del. Now i am learning at Apple Developer Academy apprentice with a strong interest in Machine Learning, particularly Deep Learning and Object Detection. Passionate about building technology that connects intelligent systems with real-world user needs. I possess strong teamwork skills and can work well under pressure. I am open to learning from experts in their fields to gain the knowledge they have. With this background, my abilities can develop and grow, helping me become a better individual.
+          Gained my bachelor&apos;s degree in information systems at Institut Teknologi Del. Now i am learning at Apple Developer Academy apprentice with a strong interest in Machine Learning, particularly Deep Learning and Object Detection. Passionate about building technology that connects intelligent systems with real-world user needs. I possess strong teamwork skills and can work well under pressure. I am open to learning from experts in their fields to gain the knowledge they have. With this background, my abilities can develop and grow, helping me become a better individual.
         </p>
       </div>
 
